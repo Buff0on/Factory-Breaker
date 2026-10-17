@@ -1,0 +1,63 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Factory Breaker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="game-wrap" aria-label="Factory Breaker game">
+        <canvas id="game" width="1280" height="720"></canvas>
+        <div id="overlay" class="overlay">
+          <div class="panel">
+            <h1>Factory Breaker</h1>
+            <p class="intro">Choose a base weapon and secondary system. Gear upgrades are installed later at city workshops after clearing sectors.</p>
+            <div class="loadout">
+              <div>
+                <h2>Main Weapon</h2>
+                <div class="choice-grid">
+                  <button class="choice selected" data-primary="sword" type="button">Arc Sword</button>
+                  <button class="choice" data-primary="rifle" type="button">Magnetic Rifle</button>
+                  <button class="choice" data-primary="shotgun" type="button">Plasma Shotgun</button>
+                </div>
+              </div>
+              <div>
+                <h2>Secondary Weapon</h2>
+                <div class="choice-grid">
+                  <button class="choice selected" data-secondary="missiles" type="button">Missiles</button>
+                  <button class="choice" data-secondary="plasma" type="button">Plasma Cannon</button>
+                  <button class="choice" data-secondary="artillery" type="button">Light Artillery</button>
+                  <button class="choice" data-secondary="laser" type="button">Defense Laser</button>
+                </div>
+              </div>
+            </div>
+            <button id="startBtn" type="button">Start Run</button>
+          </div>
+        </div>
+      </section>
+      <aside class="hud">
+        <div>
+          <h2>Controls</h2>
+          <p><b>WASD</b> walk through streets</p>
+          <p><b>Shift + W</b> front evasion thruster toward aim</p>
+          <p><b>Shift + A/D</b> side drift thrusters while aiming</p>
+          <p><b>Shift + W + A/D</b> combined 50-degree thrust</p>
+          <p><b>Shift + S</b> short back thrust</p>
+          <p><b>Left click</b> main weapon</p>
+          <p><b>Right click</b> installed gear action</p>
+          <p><b>E</b> secondary weapon</p>
+        </div>
+        <div>
+          <h2>Run Notes</h2>
+          <p>Fights happen in enclosed street sectors, not open fields.</p>
+          <p>After fights, choose paths to move through the city.</p>
+          <p>Workshops offer expensive upgrades and one or two gear choices.</p>
+          <p>Drones are fewer, tougher, smarter, and use distinct weapon patterns.</p>
+        </div>
+      </aside>
+    </main>
+    <script src="game.js"></script>
+  </body>
+</html>
